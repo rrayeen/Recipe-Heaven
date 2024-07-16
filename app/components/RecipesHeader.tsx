@@ -31,10 +31,10 @@ export const RecipesHeader: FC<RecipesHeaderProps> = ({ sesson }) => {
   }
   return (
     <div
-    className={`w-full py-6 bg-third flex gap-5 items-center px-12 justify-between border-b-2 border-primary shadow-2xl`}
+    className={`w-full py-6 bg-third flex gap-5 items-center px-2 sm:px-12 justify-between border-b-2 border-primary shadow-2xl`}
     >
       {sesson ? (
-        <div className="flex items-center gap-5 text-primary font-semibold tracking-wider ">
+        <div className="flex items-center gap-2 md:gap-5 text-primary font-semibold tracking-wider ">
           <div className="relative w-14 h-14">
             <Image
               src={sesson.user.image}
@@ -62,7 +62,7 @@ export const RecipesHeader: FC<RecipesHeaderProps> = ({ sesson }) => {
             }}
             required
             placeholder="Search for recipes..."
-            className="px-6 py-4 outline-fourth rounded-full  tracking-wider focus:outline-secondary focus:shadow-xl focus:shadow-secondary   outline-none "
+            className="px-6 py-4 w-60 md:w-auto outline-fourth rounded-full  tracking-wider focus:outline-secondary focus:shadow-xl focus:shadow-secondary   outline-none "
           />
         </form>
       </div>

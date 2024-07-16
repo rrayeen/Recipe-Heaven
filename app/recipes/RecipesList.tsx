@@ -24,11 +24,11 @@ export const RecipesList: FC<RecipesListProps> = ({ recipes }) => {
 
   if (recipes.length === 0)
     return (
-      <div className="flex items-center justify-center p-32 ">
+      <p className="flex items-center justify-center py-32 ">
         {searchParams.get("search")
           ? `There is no recipe with ${searchParams.get("search")}`
           : "Start Searching 🍕"}
-      </div>
+      </p>
     );
   return (
     <>
