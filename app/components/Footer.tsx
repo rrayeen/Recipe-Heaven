@@ -1,7 +1,7 @@
 export default async function Footer() {
   return (
     <footer id="footer" className="bg-third ">
-      <div className="flex items-center justify-around p-8">
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-around p-8">
         <div>
           <p className=" text-center font-bold tracking-wider">Contact us</p>
           <p className="">

@@ -32,7 +32,7 @@ export const RecipesList: FC<RecipesListProps> = ({ recipes }) => {
     );
   return (
     <>
-      <div className="p-14 grid gap-x-14 gap-10 grid-cols-3  grid-rows-3">
+      <div className="p-14 grid gap-x-14 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  grid-rows-3">
         {recipesList.map((el, i) => (
           <div key={i} className="shadow-2xl h-96 rounded-2xl overflow-hidden ">
             <Link href={`/recipes/recipe?id=${el.id}`}>

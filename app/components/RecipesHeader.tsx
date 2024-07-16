@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-
 import React, { FC, useCallback, useState } from "react";
 import { SignInButton } from "./SignInButton";
+import LogoutButton from "./LogoutButton";
+
 
 interface RecipesHeaderProps {
   sesson: any;
@@ -30,7 +31,7 @@ export const RecipesHeader: FC<RecipesHeaderProps> = ({ sesson }) => {
   }
   return (
     <div
-      className={`w-full py-6 bg-third flex items-center px-12 justify-between border-b-2 border-primary shadow-2xl`}
+    className={`w-full py-6 bg-third flex gap-5 items-center px-12 justify-between border-b-2 border-primary shadow-2xl`}
     >
       {sesson ? (
         <div className="flex items-center gap-5 text-primary font-semibold tracking-wider ">
@@ -42,7 +43,8 @@ export const RecipesHeader: FC<RecipesHeaderProps> = ({ sesson }) => {
               alt="image"
             ></Image>
           </div>
-          <span>Welcome, {sesson.user.name}</span>
+          <span className="hidden md:block">Welcome, {sesson.user.name}</span>
+          <LogoutButton></LogoutButton>
         </div>
       ) : (
         <SignInButton></SignInButton>

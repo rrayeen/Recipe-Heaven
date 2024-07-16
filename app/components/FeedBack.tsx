@@ -17,7 +17,7 @@ export default async function FeedBack() {
       imageUrl: "https://randomuser.me/api/portraits/men/25.jpg",
       name: "Jamal",
       feedback:
-        "Impresses with its wide variety of recipes and detailed steps. The search functionality is excellent, and user reviews help refine choices. Including nutritional information would be beneficial. A fantastic site for culinary exploration",
+        "Impresses with its wide variety of recipes and detailed steps. The search functionality is excellent. Including nutritional information would be beneficial. A fantastic site for culinary exploration",
     },
     {
       imageUrl: "https://randomuser.me/api/portraits/men/59.jpg",
@@ -29,15 +29,15 @@ export default async function FeedBack() {
       imageUrl: "https://randomuser.me/api/portraits/men/55.jpg",
       name: "Mark",
       feedback:
-        "Offers a user-friendly experience with a vast collection of diverse recipes. The clear instructions and vibrant photos make cooking easy and enjoyable. User reviews enhance the community feel. However, adding meal planning and shopping list features would improve the site. Overall, a great resource for cooking enthusiasts",
+        "Offers a user-friendly experience with a vast collection of diverse recipes. The clear instructions and vibrant photos make cooking easy and enjoyable. However, adding meal planning and shopping list features would improve the site. Overall, a great resource for cooking enthusiasts",
     },
   ];
   return (
-    <div className="grid  grid-cols-2 gap-14 p-12">
+    <div className="grid grid-rows-1  md:grid-cols-2 gap-14 p-12">
       {Fake_Data.map((el, i) => (
         <div
           key={i}
-          className="grid gap-y-4 grid-cols-[auto_1fr] gap-x-4 items-center"
+          className="grid gap-y-4  first:border-t-0 pt-6 border-t md:[&:nth-child(2)]:border-t-0  grid-cols-[auto_1fr] gap-x-4 items-center"
         >
           <div className="relative h-12 w-12">
             <Image

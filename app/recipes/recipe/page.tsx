@@ -8,6 +8,7 @@ import { GiConfirmed } from "react-icons/gi";
 import Link from "next/link";
 import { auth } from "@/app/_lib/auth";
 import { SignInButton } from "@/app/components/SignInButton";
+import LogoutButton from "@/app/components/LogoutButton";
 
 interface param {
   id: string;
@@ -33,8 +34,8 @@ const page: FC<pageProps> = async ({ searchParams }) => {
   const recipe = data.data.recipe;
 
   return (
-    <div className="py-12 bg-fourth px-20 w-full">
-      <div className="px-4 flex items-center justify-between">
+    <div className="py-12 bg-fourth px-6 sm:px-12 md:px-20 w-full">
+      <div className="lg:px-4 flex items-center justify-between">
         <Link href="/recipes">
           <IoArrowUndoSharp className="text-2xl cursor-pointer rounded-full"></IoArrowUndoSharp>
         </Link>
@@ -49,6 +50,7 @@ const page: FC<pageProps> = async ({ searchParams }) => {
               ></Image>
             </div>
             <span> {sesson.user?.name}</span>
+            <LogoutButton></LogoutButton>
           </div>
         ) : (
           <SignInButton></SignInButton>
@@ -56,7 +58,7 @@ const page: FC<pageProps> = async ({ searchParams }) => {
       </div>
       
       <div className="w-full flex items-center justify-center ">
-        <div className="relative w-1/2 h-96 mt-12 ">
+        <div className="relative w-full md:w-3/4 lg:w-1/2 h-96 mt-12 ">
           <Image
             src={recipe.image_url}
             className=" object-cover rounded-lg"
@@ -66,11 +68,11 @@ const page: FC<pageProps> = async ({ searchParams }) => {
           ></Image>
         </div>
       </div>
-      <div className="px-24 py-20 mt-12   rounded-3xl bg-third">
+      <div className="px-12 lg:px-24 py-20 mt-12   rounded-3xl bg-third">
         <p className="text-center tracking-widest text-5xl py-6 text-red-800">
           {recipe.title}
         </p>
-        <div className="flex items-center gap-6 p-10">
+        <div className="flex items-center justify-between md:justify-normal md:gap-6 py-10 lg:p-10">
           <div className="flex items-center gap-2">
             <CiTimer></CiTimer>
             {recipe.cooking_time} MINUTES
@@ -80,7 +82,7 @@ const page: FC<pageProps> = async ({ searchParams }) => {
             {recipe.servings} SERVINGS
           </div>
         </div>
-        <div className="w-full grid grid-cols-2 items-center  gap-x-16  gap-y-16 border-t border-b py-10 border-black">
+        <div className="w-full grid md:grid-cols-2 items-center  gap-x-16  gap-y-16 border-t border-b py-10 border-black">
           <p className=" col-span-full text-center text-red-300 text-2xl">
             RECIPE INGREDIENTS
           </p>

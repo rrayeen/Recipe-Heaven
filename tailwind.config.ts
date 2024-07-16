@@ -18,6 +18,9 @@ const config: Config = {
         third: "#FFEEA9",
         fourth: "#FEFFD2",
       },
+      boxShadow: {
+        innershadow : 'rgba(50, 50, 93,0.4) 0px 30px 90px 30px inset, rgba(0, 0, 0, 0.3) 0px 18px 30px -30px inset'
+      }
     },
   },
   plugins: [],

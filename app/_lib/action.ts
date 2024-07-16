@@ -1,5 +1,8 @@
 "use server";
-import { signIn } from "../_lib/auth";
+import { signIn,signOut } from "../_lib/auth";
 export async function singInAction() {
   await signIn("google");
+}
+export async function singOutAction() {
+  await signOut();  
 }
