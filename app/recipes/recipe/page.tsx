@@ -22,7 +22,9 @@ interface ingr {
   unit: string | null;
   description: string;
 }
-
+export const metadata = {
+  title:'Recipe'
+  }
 const page: FC<pageProps> = async ({ searchParams }) => {
   const id = searchParams.id;
   const res = await fetch(

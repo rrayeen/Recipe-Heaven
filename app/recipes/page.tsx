@@ -12,6 +12,9 @@ interface recipe {
   id: string;
 }
 
+export const metadata = {
+title:'Recipes'
+}
 export default async function Page({ searchParams }: { searchParams: string }) {
 
   const res = await fetch(
