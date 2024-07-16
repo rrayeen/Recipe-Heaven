@@ -1,7 +1,7 @@
 export default async function Header() {
   return (
     <div className="">
-      <p className=" text-2xl  text-fourth text-wrap  ml-12  mt-12 leading-loose tracking-widest">
+      <p className=" text-2xl  text-fourth text-wrap px-6  md:ml-12  mt-12 leading-loose tracking-widest">
         <span className="text-primary text-4xl font-semibold">
           Welcome to our culinary haven!
         </span>
