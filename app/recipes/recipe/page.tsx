@@ -71,7 +71,7 @@ const page: FC<pageProps> = async ({ searchParams }) => {
         </div>
       </div>
       <div className="px-12 lg:px-24 py-20 mt-12   rounded-3xl bg-third">
-        <p className="text-center tracking-widest text-5xl py-6 text-red-800">
+        <p className="text-center tracking-widest text-4xl md:text-5xl py-6 text-red-800">
           {recipe.title}
         </p>
         <div className="flex items-center justify-between md:justify-normal md:gap-6 py-10 lg:p-10">

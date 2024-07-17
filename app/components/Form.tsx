@@ -20,11 +20,11 @@ export default function Form({ sesson }: { sesson: any }) {
   }
   return (
     <form
-      className="mt-4 bg-third rounded grid grid-rows-3 md:grid-cols-2 h-[48rem] md:h-96 2xl:w-2/3 shadow-lg p-4"
+      className="mt-4 bg-third rounded grid grid-rows-5 sm:grid-rows-3 md:grid-cols-2 h-[48rem] md:h-96 2xl:w-2/3 shadow-lg p-4"
     >
-      <div className="flex flex-col  md:row-span-3 h-full">
+      <div className="flex flex-col row-span-2 sm:row-span-2  md:row-span-3 h-full">
         <label htmlFor="feed" className="flex items-center gap-4 mx-4">
-          <div className="h-14 w-14 relative">
+          <div className="h-11 w-11 sm:w-14 sm:h-14  relative">
             <Image
               src={sesson.user?.image || ""}
               alt="image"
@@ -37,7 +37,7 @@ export default function Form({ sesson }: { sesson: any }) {
         <textarea
           name="feed"
           id="feed"
-          className="p-4 border rounded-lg resize-none m-4 h-full shadow-sm "
+          className="p-4 border rounded-lg resize-none  m-4 h-full shadow-sm "
           placeholder="Give us feedback..."
           value={feed}
           onChange={(e)=>setFeed(e.target.value)}

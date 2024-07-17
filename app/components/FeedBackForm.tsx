@@ -6,7 +6,7 @@ export default async function FeedBackForm() {
   const sesson = await auth();
   return (
     <div className="p-8 flex items-center justify-center flex-col">
-      <p className=" tracking-widest font-bold text-fourth">Post feedback ❤</p>
+      <p className=" tracking-widest font-bold text-fourth">Post a feedback ❤</p>
 
       {sesson ? (
         <Form sesson={sesson}></Form>
